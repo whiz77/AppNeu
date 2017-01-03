@@ -11,35 +11,25 @@ import {
 
 } from 'react-native';
 
-
-
-var randomImage = [
-    require('../Images/Img1.png'),
-    require('../Images/Img2.png'),
-    require('../Images/Img3.png'),
-    require('../Images/Img4.png'),
-    require('../Images/Img5.png')
-];
-
+import Slider from '/Users/wicker/Dropbox/Development/AppNeu/Components/Slider';
 
 export default class Profil extends Component {
 
 
-    onButtonPress () {
+    onButtonPress() {
         this.props.navigator.push({
-            id: 'Slider'
+            id: 'NewSite'
         })
     };
-
-
 
     render() {
         return (
             <Image style={styles.container} source={require('../Images/imgBack.png')}>
                 <View style={[styles.pictures, styles.shadow]}>
                     <View style={styles.stagePic}>
-                        <Image style={styles.singlePicBig}
-                        source={randomImage[Math.floor(Math.random()*randomImage.length)]}/>
+                        <View style={styles.singlePicBig}>
+                            <Slider/>
+                        </View>
                     </View>
                     <View style={styles.smallPic}>
                         <Image style={styles.singlePicSmall} source={require('../Images/Img3.png')}/>
@@ -61,7 +51,8 @@ export default class Profil extends Component {
                         </View>
                     </View>
                     <View style={styles.btnFooter}>
-                        <TouchableHighlight style={styles.primaryCta} onPress={this.onButtonPress.bind(this)} activeOpacity={0.5}
+                        <TouchableHighlight style={styles.primaryCta} onPress={this.onButtonPress.bind(this)}
+                                            activeOpacity={0.5}
                                             underlayColor={'transparent'}>
                             <Text style={styles.textPrimaryCta}>Neue Seite</Text>
                         </TouchableHighlight>
@@ -108,9 +99,9 @@ const styles = StyleSheet.create({
     },
     singlePicBig: {
         flex: 1,
-        resizeMode: 'stretch',
-        width: null,
-        height: null,
+        //resizeMode: 'stretch',
+        // width: null,
+        // height: null,
 
     },
     singlePicSmall: {

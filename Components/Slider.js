@@ -8,33 +8,31 @@ import {
 
 } from 'react-native';
 
-import ImageSlider from 'react-native-image-slider';
-
-
 export default class Slider extends Component {
 
-    render() {
+    randomImage = [
+        require('../Images/Img1.png'),
+        require('../Images/Img2.png'),
+        require('../Images/Img3.png'),
+        require('../Images/Img4.png'),
+        require('../Images/Img5.png')
+    ];
 
+    render() {
         return (
             <View>
-                <ImageSlider style={styles.slider}
-                    images={[
-                    'http://placeimg.com/640/480/any',
-                    'http://placeimg.com/640/480/any',
-                    'http://placeimg.com/640/480/any'
-                ]}/>
+                <Image source={this.randomImage[parseInt(Math.floor(Math.random() * this.randomImage.length))]}/>
             </View>
         )
     }
-
 }
 
 const styles = StyleSheet.create({
 
     slider: {
-        flex: 1
+        flex: 1,
+        width: null,
+        height: null,
     }
 
 });
-
-module.exports = Slider;

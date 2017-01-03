@@ -1,9 +1,8 @@
 import React, {Component} from "react";
 import {View, Text, StyleSheet, TouchableHighlight, AppRegistry, Navigator } from "react-native";
 
-var Profil = require('../AppNeu/Components/Profil');
-var NewSite = require('../AppNeu/Components/NewSite');
-var Slider = require('../AppNeu/Components/Slider');
+const Profil = require('../AppNeu/Components/Profil');
+const NewSite = require('../AppNeu/Components/NewSite');
 
 
 class AppNeu extends Component {
