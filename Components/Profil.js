@@ -17,6 +17,7 @@ export default class Profil extends Component {
 
 
     onButtonPress() {
+        console.log('test');
         this.props.navigator.push({
             id: 'NewSite'
         })
