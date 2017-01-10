@@ -12,7 +12,6 @@ import {
 import UIComponent from '/Users/wicker/Dropbox/Development/AppNeu/Components/UiComponents';
 
 
-
 export default class NewSite extends Component {
 
     constructor(props) {
@@ -69,7 +68,9 @@ export default class NewSite extends Component {
                     />
                 </View>
                 <View style={styles.area2}>
-                        <UIComponent onClick={(e) => this.onBackButtonPress(e)}/>
+                    <UIComponent
+                        paragraph="hallo"
+                    />
                 </View>
             </Image>
         )

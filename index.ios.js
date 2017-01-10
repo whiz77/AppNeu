@@ -10,7 +10,7 @@ class AppNeu extends Component {
         return (
             <Navigator
                 initialRoute={{
-                id: 'Profil'
+                id: 'NewSite'
             }}
                 renderScene={
                 this.navigatorRenderScene

@@ -29,6 +29,7 @@ export default class UiComponents extends Component {
                                     underlayColor={'transparent'}>
                     <Text style={styles.textPrimaryCta}>{this.state.text}</Text>
                 </TouchableHighlight>
+                <Text style={styles.text}>{this.props.paragraph}</Text>
             </View>
         )
     }
